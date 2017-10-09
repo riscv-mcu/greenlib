@@ -686,6 +686,10 @@ public:
                                              gs::cnf::post_write,
                                              GenericRouter_b,
                                              addressChanged);
+            GC_REGISTER_TYPED_PARAM_CALLBACK(&greenSocketAddress->high_addr,
+                                             gs::cnf::post_write,
+                                             GenericRouter_b,
+                                             addressChanged);
         }
     }
 

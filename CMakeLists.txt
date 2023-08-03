@@ -29,7 +29,7 @@ add_custom_target(run_test COMMAND make test)
 
 # Require SystemC
 set(SystemC_USE_STATIC_LIBS ${USE_STATIC_SYSTEMC})
-find_package(SystemC 2.3.0)
+find_package(SystemC)
 if(SystemC_FOUND)
     set(EXTERNAL_INCLUDE_DIRS ${EXTERNAL_INCLUDE_DIRS} ${SystemC_INCLUDE_DIRS})
 else()
@@ -37,7 +37,7 @@ else()
 endif()
 
 # Require TLM
-find_package( TLM )
+find_package(TLM)
 if(TLM_FOUND)
     set(EXTERNAL_INCLUDE_DIRS ${EXTERNAL_INCLUDE_DIRS} ${TLM_INCLUDE_DIRS})
 else()
